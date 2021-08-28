@@ -3,17 +3,17 @@ class Regipy < Formula
 
   desc "Offline registry hive parsing tool"
   homepage "https://github.com/mkorman90/regipy"
-  url "https://files.pythonhosted.org/packages/67/62/7e8d11a473382c69fb91e33a621bcadebab87a0815d0f84306822a266984/regipy-2.0.1.tar.gz"
-  sha256 "3e68dc4c48c21aa23dab21fc83dea209fb1113194690001effbbd77f86d3b033"
+  url "https://files.pythonhosted.org/packages/f1/d9/ebae459c0784f409b133b6206fd29e7c66c0b9e82d0469c5760d65db7fcd/regipy-2.2.0.tar.gz"
+  sha256 "d6eec6d646fdfc290296668dae1a68811b1365e3a1fca64e0b7e3290de099e8f"
   license "MIT"
-  head "https://github.com/mkorman90/regipy.git"
+  head "https://github.com/mkorman90/regipy.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d59e8295ab8152b3b22a4189221cf982b9a59aa24cd198cd70f64d7849d9668d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "022d6f300929b3708d180b13dee570e03078c83bf11378cc18273fb6b00f331d"
-    sha256 cellar: :any_skip_relocation, catalina:      "61a4fa5be157c4deaeda41be30c7801c749412735681df349bb5391c3a4f4710"
-    sha256 cellar: :any_skip_relocation, mojave:        "0932af08a98792024fbbdef177c0888649dfcf5f182b54be84678c0ed945f2cb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "df822c1359d4820af2bb6dcc8bfd7319d3d8e4a65c2874a7fb5f573398762b20"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d23cba8777868085dd95e650e77a2b8b7717f6d075f291f63d1b33fae311fb08"
+    sha256 cellar: :any_skip_relocation, big_sur:       "ceab82a175e88eac4affd79bcf50ec9b4ef5f4ac92471c262b86fba419d469a1"
+    sha256 cellar: :any_skip_relocation, catalina:      "7226b7e1bcc61f1b1867cf294758353e9bd5f1faf50d093562381412183f3b9d"
+    sha256 cellar: :any_skip_relocation, mojave:        "3844df02655ca71a3dd6ab4a911bfd7318c950434077e9c5791cf2601049393b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1a2abc5c213e559fac287f75d09d51e7202a9f12ac7091e9232db365075f3475"
   end
 
   depends_on "python-tabulate"
@@ -47,12 +47,6 @@ class Regipy < Formula
   resource "test_hive" do
     url "https://raw.githubusercontent.com/mkorman90/regipy/71acd6a65bdee11ff776dbd44870adad4632404c/regipy_tests/data/SYSTEM.xz"
     sha256 "b1582ab413f089e746da0528c2394f077d6f53dd4e68b877ffb2667bd027b0b0"
-  end
-
-  # Remove for next release
-  patch do
-    url "https://github.com/mkorman90/regipy/commit/655addc9069a25fae01baef4eb3fff87bca1a467.patch?full_index=1"
-    sha256 "cbcdf5f613cbbe30460172b034c1ac8427c61e2fba4f37819cbb0aea5995a567"
   end
 
   def install

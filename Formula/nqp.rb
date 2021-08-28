@@ -1,16 +1,16 @@
 class Nqp < Formula
   desc "Lightweight Perl 6-like environment for virtual machines"
-  homepage "https://github.com/perl6/nqp"
+  homepage "https://github.com/Raku/nqp"
   # NOTE: Please keep these values in sync with moarvm & rakudo when updating.
-  url "https://github.com/perl6/nqp/releases/download/2021.06/nqp-2021.06.tar.gz"
-  sha256 "26992816b84e3624d197c64dcfaca59bcebb10338b81e5402853b426a5a200b4"
+  url "https://github.com/Raku/nqp/releases/download/2021.08/nqp-2021.08.tar.gz"
+  sha256 "bb01cf11cbba910047259b75c8bfba83b557acaab170f64f24810fbd5f69319b"
   license "Artistic-2.0"
 
   bottle do
-    sha256 arm64_big_sur: "0d99267f131699d5bbae0f2ef1f8e4317862a5907e82d5418a3405751587be14"
-    sha256 big_sur:       "24a88212b499b1af8d7b79ae5343cd0ec1444a6988ad317669b96a61cf385a10"
-    sha256 catalina:      "e23236c616b4d75c082e79d86138fa6a8cb534eaf8919a4259e199e15005063d"
-    sha256 mojave:        "5e07afdc719d2f47fa232e13d7ccb48a38e814c093de2f8facaa3aad7a9a88be"
+    sha256 arm64_big_sur: "00b709dc037e78fe9f02887a27ea81d290f2c4bf2efacd8b6c98e99b4bade70f"
+    sha256 big_sur:       "084b3c8e452b508cc9aa0fbd2d5ac1c7201ede4c9e264e09d359ac1e4ca32bf5"
+    sha256 catalina:      "bd81778fcb27c46e23c3f0fad3f48e3be86e6d80ee6667732c4cd3ba050262ee"
+    sha256 mojave:        "62f968288f666a49aab55acab46a4de09dc7b09d449871c360ef5564822fb0a3"
   end
 
   depends_on "libtommath"

@@ -1,22 +1,22 @@
 class FluentBit < Formula
-  desc "Data Collector for IoT"
+  desc "Fast and Lightweight Logs and Metrics processor"
   homepage "https://github.com/fluent/fluent-bit"
-  url "https://github.com/fluent/fluent-bit/archive/v1.8.1.tar.gz"
-  sha256 "a284d803ec9203be69b7c4ff9febb33b8c938b640f0cc7cbcf6f9223e5de4fb5"
+  url "https://github.com/fluent/fluent-bit/archive/v1.8.4.tar.gz"
+  sha256 "9debe7b13e0ebb093058d4ca75125c980b38226bd4928f908357a894691f397d"
   license "Apache-2.0"
   head "https://github.com/fluent/fluent-bit.git"
 
   livecheck do
     url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :github_latest
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "9e509c9fbbec4da171f7ce2b8a8c7d48a12cf18b1717438a94011f2f68773d9f"
-    sha256 cellar: :any,                 big_sur:       "7bf2cd14575c8b1f537395e9f71c1166158f8996268b3118434868c657168d4c"
-    sha256 cellar: :any,                 catalina:      "a93ac767c26eee5290ff6e2d15197faf1b8419dedefc375bee9f0eee4aaae621"
-    sha256 cellar: :any,                 mojave:        "91fbae2a767d0a0ac6eae0fafcdb39a28bc3b5079de4d808051735da93a85998"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2c1c6a51ac220d1aa8817661b3bb74c557b643f638cef77230febae2d4c2bf19"
+    sha256 cellar: :any,                 arm64_big_sur: "190b4b02d89f7a58922e5bb5f416fe52a7ef0a4d964df796b6b1c3813a727519"
+    sha256 cellar: :any,                 big_sur:       "25ae171ba11f124606b5359b812592bc4951dc4e096b919e79d5ec50059d7812"
+    sha256 cellar: :any,                 catalina:      "936fca5833532f268ffd664fd0c1992999be85b7656ef347b07e5d3a9815d917"
+    sha256 cellar: :any,                 mojave:        "5c701a939ec7ae30355ecadbb50f40abd3b16406f5a9570a5867d6ebabc5bc1d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "13466efa595f89ae6187698f11a63ab710b6b396b9bf79281f6caa837de1560d"
   end
 
   depends_on "bison" => :build
@@ -63,7 +63,7 @@ index 0671542a..67f1c368 100644
 +++ b/lib/cmetrics/src/cmt_time.c
 @@ -20,7 +20,7 @@
  #include <cmetrics/cmt_info.h>
- 
+
  /* MacOS */
 -#ifdef FLB_HAVE_CLOCK_GET_TIME
 +#ifdef CMT_HAVE_CLOCK_GET_TIME
@@ -88,7 +88,7 @@ index f6654506..fe117172 100644
 @@ -434,27 +434,6 @@ if(FLB_BINARY)
        DESTINATION "${FLB_INSTALL_BINDIR}")
    endif()
- 
+
 -  # Detect init system, install upstart, systemd or init.d script
 -  if(IS_DIRECTORY /lib/systemd/system)
 -    set(FLB_SYSTEMD_SCRIPT "${PROJECT_SOURCE_DIR}/init/${FLB_OUT_NAME}.service")

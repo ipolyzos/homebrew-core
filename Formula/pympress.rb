@@ -3,15 +3,15 @@ class Pympress < Formula
 
   desc "Simple and powerful dual-screen PDF reader designed for presentations"
   homepage "https://github.com/Cimbali/pympress/"
-  url "https://files.pythonhosted.org/packages/df/e2/505d85316e07aa2a641cf88460a2bb0ac0eac26462e87b98993a08b1e639/pympress-1.6.2.tar.gz"
-  sha256 "70b6933dda56e2ed300d257777ae0ced2964dbb9dab7dc3e25abd8d7abe3b56c"
+  url "https://files.pythonhosted.org/packages/30/15/076cbcb2fcd828da499db28bda2699bdadc73c16953c564fee6e3b6c28c8/pympress-1.6.4.tar.gz"
+  sha256 "f84b9dc4da0defab1dc3c39ba91837f51af7837b775194f0057d0045c8d2b04f"
   license "GPL-2.0-or-later"
-  head "https://github.com/Cimbali/pympress.git"
+  head "https://github.com/Cimbali/pympress.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "1d060473d4219e0a59721dd43fdc0509f2e831e477b4d6f3f743882807b9223e"
-    sha256 cellar: :any_skip_relocation, catalina: "28a9d7f3846b5e0c696f5ccbe0dc49a5fca8e58e75719297552967912ec77b28"
-    sha256 cellar: :any_skip_relocation, mojave:   "6a95a2666b7cb89a35733acbb514e1070031c7fc9cf1a8ead5b0f91f9e8e4658"
+    sha256 cellar: :any_skip_relocation, big_sur:  "e676d43863f32308f8ceac376b28404d969d0657ddf72b9e913ca58969e663a9"
+    sha256 cellar: :any_skip_relocation, catalina: "3e1d8520834e6e0b7306387a5777455daf1af13d17fbd39d3375eb253a2b1c74"
+    sha256 cellar: :any_skip_relocation, mojave:   "ad9edde182f9457d972dddc82a24792ea1043b8ced0a3517d468656b4a28d359"
   end
 
   depends_on "gobject-introspection"
@@ -22,8 +22,8 @@ class Pympress < Formula
   depends_on "python@3.9"
 
   resource "watchdog" do
-    url "https://files.pythonhosted.org/packages/f5/c2/d1ff8343cd38138561d2f08aba7b0566020485346097019f3a87773c96fc/watchdog-2.1.3.tar.gz"
-    sha256 "e5236a8e8602ab6db4b873664c2d356c365ab3cac96fbdec4970ad616415dd45"
+    url "https://files.pythonhosted.org/packages/c5/e9/fb0f9775c82b4df1815bb97ebac13383adddff4cf014aceefb7c02262675/watchdog-2.1.5.tar.gz"
+    sha256 "5563b005907613430ef3d4aaac9c78600dd5704e84764cb6deda4b3d72807f09"
   end
 
   def install

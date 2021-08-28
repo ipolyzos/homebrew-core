@@ -1,25 +1,25 @@
 class Gitbucket < Formula
   desc "Git platform powered by Scala offering"
   homepage "https://github.com/gitbucket/gitbucket"
-  url "https://github.com/gitbucket/gitbucket/releases/download/4.36.0/gitbucket.war"
-  sha256 "a8b3da99168de6d0e0c6d54254803ca532c76d0d2190f98833d5e4cc3d3e56e1"
+  url "https://github.com/gitbucket/gitbucket/releases/download/4.36.2/gitbucket.war"
+  sha256 "d22089c0ba131c82c70c55bc9427b2ec095098815f96ca31f88edd7c2882d62d"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "999c7d3b3941795d23443c9e90a518a24983d1426376648663803b78a60d57a2"
+    sha256 cellar: :any_skip_relocation, all: "e36a21cee810ab68ae0fa938fbbf070262a8d2d0032725d8fa6cc0a8648fa1da"
   end
 
   head do
-    url "https://github.com/gitbucket/gitbucket.git"
-    depends_on "ant" => :build
+    url "https://github.com/gitbucket/gitbucket.git", branch: "master"
+    depends_on "sbt" => :build
   end
 
   depends_on "openjdk"
 
   def install
     if build.head?
-      system "ant"
-      libexec.install "war/target/gitbucket.war", "."
+      system "sbt", "executable"
+      libexec.install "target/executable/gitbucket.war"
     else
       libexec.install "gitbucket.war"
     end

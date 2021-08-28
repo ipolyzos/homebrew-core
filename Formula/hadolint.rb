@@ -1,16 +1,16 @@
 class Hadolint < Formula
   desc "Smarter Dockerfile linter to validate best practices"
   homepage "https://github.com/hadolint/hadolint"
-  url "https://github.com/hadolint/hadolint/archive/v2.6.0.tar.gz"
-  sha256 "4001fa296cccf8366af773b33edb5d8131d375096c6bf593890164818dbc3e2d"
+  url "https://github.com/hadolint/hadolint/archive/v2.7.0.tar.gz"
+  sha256 "791221086ea1973e0ed6e325a01fd2e3a38f49c1d6b1773d680fd647a11bc147"
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1a147ced2e0c45fb6a67281ccac1e4e6e7f82644fff2d6e53d0cac791ebcd151"
-    sha256 cellar: :any_skip_relocation, big_sur:       "cd0497cca38f6a6ad914f34951bf4178cc689f3599ce000377f3049ead0ffbbd"
-    sha256 cellar: :any_skip_relocation, catalina:      "88978464f63f97957d17ce8a3728a6575815ecb4ee6d2a670ade6c166e23c041"
-    sha256 cellar: :any_skip_relocation, mojave:        "77f170344d5275b6eebbed7699d5f2406a30532b35edce0e60f1ab5cf312ff35"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1059695a96883652329d6688d085c8600914b7c2e597acbb0c2acb4cdfa4c78d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b345719e7030dad180b81669fbf7a967d984c6887b6e880f0c031b38e95e52d3"
+    sha256 cellar: :any_skip_relocation, big_sur:       "abce0685f4b3f1ead842ff06ad3558241df8774f688d47756ecd35ebcfab3269"
+    sha256 cellar: :any_skip_relocation, catalina:      "5eab02ca98f5edb9d0739b3e32a571a2ccc7ff3a1587f6ec551538920e501f63"
+    sha256 cellar: :any_skip_relocation, mojave:        "c0fa969e5b180cf5ddd5f46ddee81bf76bebe902f40e7a248ff235930b37d60f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1f3cc5ceb8966c2ee52d7ff8d5a54ab8c3a6308f0581f909fa933cf86fe83035"
   end
 
   depends_on "ghc" => :build

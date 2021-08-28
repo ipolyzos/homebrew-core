@@ -1,9 +1,11 @@
 class Clusterctl < Formula
   desc "Home for the Cluster Management API work, a subproject of sig-cluster-lifecycle"
   homepage "https://cluster-api.sigs.k8s.io"
-  url "https://github.com/kubernetes-sigs/cluster-api/archive/refs/tags/v0.4.0.tar.gz"
-  sha256 "af60c8aa1b21eccc7f272c0135ffaf1a8e0ecdffb4173075efac52509ce0eeb0"
+  url "https://github.com/kubernetes-sigs/cluster-api.git",
+      tag:      "v0.4.2",
+      revision: "dd8048ce988bd7d7ab6dce760c2ce12e06c2482b"
   license "Apache-2.0"
+  head "https://github.com/kubernetes-sigs/cluster-api.git", branch: "master"
 
   # Upstream creates releases on GitHub for the two most recent major/minor
   # versions (e.g., 0.3.x, 0.4.x), so the "latest" release can be incorrect. We
@@ -17,16 +19,19 @@ class Clusterctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d7dbe58662801cc61010395c0ab0599bf41f0f66ecaa8a2a2edb0dc22695df5d"
-    sha256 cellar: :any_skip_relocation, big_sur:       "86cc35474c11ea9869cce7b4c6aec6eae2d71f1cd334b08576a9dbe8dc1cdea2"
-    sha256 cellar: :any_skip_relocation, catalina:      "fdacdcc5c272ce5ab9bb84ec0dbb3560888221072aa71fde46fb280cb33be621"
-    sha256 cellar: :any_skip_relocation, mojave:        "6f97b2dcdbbd79194265ca46715f7bc6511acd9a6db4ee33496f7fdf8baa0f82"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8c62d421b11c03b6f13c41a856a9a7be020f38ac89bf4da299b35aac4ea98b17"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "1702a4443b1d310aad17c7c98c9c96103a34d13907d108b24165780666adf840"
+    sha256 cellar: :any_skip_relocation, big_sur:       "3e007450ef2d4160cba85aef287d7528cbc0532c3fb4ca06b07632223e6c9c27"
+    sha256 cellar: :any_skip_relocation, catalina:      "b1e72c3e6048162ab3d0a07b2f358cabca7f5b09a2655484af88ed5f00fc1cd2"
+    sha256 cellar: :any_skip_relocation, mojave:        "700092086903c9df8e0d4bbe89a5be1ba94671057261de6d0f15f6489fd8e00d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "07c64e9f9eb9e253faee1b12095b2f80b780bfc0cdbd7d5edecaacd8ba464396"
   end
 
   depends_on "go" => :build
 
   def install
+    # Don't dirty the git tree
+    rm_rf ".brew_home"
+
     system "make", "clusterctl"
     prefix.install "bin"
   end

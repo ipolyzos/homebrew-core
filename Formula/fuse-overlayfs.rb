@@ -1,12 +1,12 @@
 class FuseOverlayfs < Formula
   desc "FUSE implementation for overlayfs"
   homepage "https://github.com/containers/fuse-overlayfs"
-  url "https://github.com/containers/fuse-overlayfs/archive/refs/tags/v1.6.tar.gz"
-  sha256 "5606c5c1e4e0d7063f3f50a72c906f23b7a505784d20dc40fff9e4b2b802d5f4"
+  url "https://github.com/containers/fuse-overlayfs/archive/refs/tags/v1.7.1.tar.gz"
+  sha256 "fe2c076aed7b8669e7970301a99c0b197759b611035d8199de4c0add7d2fb2b4"
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "ac9998b322ee4feca49fdd048eefbb87f30afe9c00ec75d67aca2cbffcf30539"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "2e7c2712c1ee3eba77c2ad8f3c6eee59c2500a20ef259268affaf6283a98d4d8"
   end
 
   depends_on "autoconf" => :build
@@ -18,9 +18,9 @@ class FuseOverlayfs < Formula
 
   def install
     system "autoreconf", "-fis"
-    system "./configure", "--prefix=/", "--sbindir=/sbin"
+    system "./configure", "--prefix=#{prefix}"
     system "make"
-    system "make", "install", "DESTDIR=#{prefix}"
+    system "make", "install"
   end
 
   test do

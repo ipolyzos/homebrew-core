@@ -1,10 +1,10 @@
 class RosaCli < Formula
   desc "RedHat OpenShift Service on AWS (ROSA) command-line interface"
   homepage "https://www.openshift.com/products/amazon-openshift"
-  url "https://github.com/openshift/rosa/archive/refs/tags/v1.0.9.tar.gz"
-  sha256 "229b342e0767a9594f8c9e07c2792999c84627e2ef7ecdae5b0a21869ece2f8c"
+  url "https://github.com/openshift/rosa/archive/refs/tags/v1.1.1.tar.gz"
+  sha256 "506a8f7240a54821f7d42f827b7586555cc1ecfea5b85683b9c1db20a8329916"
   license "Apache-2.0"
-  head "https://github.com/openshift/rosa.git"
+  head "https://github.com/openshift/rosa.git", branch: "master"
 
   livecheck do
     url :stable
@@ -13,11 +13,11 @@ class RosaCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "637bc63a9a87158cb43069330b9df3b175b60bb0c9afbc1a7ad1deb24e29fd6f"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d91d264307b1ab814bd4deb5ed34a13999420d859288d3a9e88fdfc6362a7f8a"
-    sha256 cellar: :any_skip_relocation, catalina:      "02978ca867911741f210a58d6a518eaa443ae0b4c7776165dfd31b062b254d3e"
-    sha256 cellar: :any_skip_relocation, mojave:        "1c77eb6e2ce4d27fbe09dafbf6e2d5cbedb79cd8420b1cf40c300202ed055825"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4cf41d1dbfc39507f78ae6c1f0a908f56ba97456d205490058ce745f0c2be67d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "bfb6f0332a68805bc4bd26cd392bef0034fab43308c26693a4301b41ff442163"
+    sha256 cellar: :any_skip_relocation, big_sur:       "0ffc85a344a8cd07501e102f0b3ca83bfe18f87ed6c18609e834eac6864ab461"
+    sha256 cellar: :any_skip_relocation, catalina:      "e8b9650a21e9618c62f709dfb8d263c37b0895e3982072fd5f51ce015a4b41ab"
+    sha256 cellar: :any_skip_relocation, mojave:        "717c6de3f0a1d27b2186f605ef474d2444197abcc05f344d3378bd7c96eb74c3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b73dd557e93b9af2465a9af250ceb95d6d19f13b197f99c8bb7c052a7a0d535d"
   end
 
   depends_on "go" => :build
