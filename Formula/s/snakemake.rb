@@ -3,19 +3,20 @@ class Snakemake < Formula
 
   desc "Pythonic workflow system"
   homepage "https://snakemake.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/3a/ce/147b7dad21e8be5910484fdfea0d99d03efa5d516f8526516970716ec5fc/snakemake-8.13.0.tar.gz"
-  sha256 "1db3eee3d6de19d10e0abf8f297c116c9ad69f755087487563a2bc2b632d9bdf"
+  url "https://files.pythonhosted.org/packages/2f/07/5d283f068f74e7bd6df9c9aba87fa5cf0d2e7c65171f2e43101c998ac133/snakemake-8.14.0.tar.gz"
+  sha256 "f7ea6ce0fc7544ef4329fa808d6e2e1c1b3adff2b4658dcc096a41741a7e8d81"
   license "MIT"
+  revision 1
   head "https://github.com/snakemake/snakemake.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "85c10934fdd4842389696b0da504a054522cff79f857506ee29811f9d6498690"
-    sha256 cellar: :any,                 arm64_ventura:  "354ae5bbb9fc84597a7db2037eb40c0feefff68e68e939b715bc0e042498dff1"
-    sha256 cellar: :any,                 arm64_monterey: "d1f32adb497b94bf6f7255ab60f777c03d158f6bd8d3a0eb9e049cf212a774b0"
-    sha256 cellar: :any,                 sonoma:         "cbe5856255da081456124d72879c49dfd372ac17e6950c81fd15e68e3b4b7e79"
-    sha256 cellar: :any,                 ventura:        "53f6a62299825e3ad992ff0dcb9038e04190e77edd795a74809def4131793f33"
-    sha256 cellar: :any,                 monterey:       "a2080f709a50c5f611652ae4c4cbaeaa14d75eeb6b3c249d0206c8b559af80b5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "73bef6f84d2a96a3d2278e7ad53511dde7e60b430c80ddcd8e6a6138cbe243b1"
+    sha256 cellar: :any,                 arm64_sonoma:   "a2215b4bca92acb49d6900bd708d5bc5c31f215d2b218e1f9d8b9ff7ab8a74d0"
+    sha256 cellar: :any,                 arm64_ventura:  "0387141f692b9a590801495d0accb035eed0d97c0e6228c3df0a55dc418457d6"
+    sha256 cellar: :any,                 arm64_monterey: "70e77cc73e34903e243a0fff5baed00b837c9b8e34cea1b1a62e482b1ac2d602"
+    sha256 cellar: :any,                 sonoma:         "834c0c11e13904763a91e4965356770e8f33a336f5a6e7c931cfed86b6cfc5c2"
+    sha256 cellar: :any,                 ventura:        "b3266784b7130bf8b0b4c47e5cf0acc2534919e7c5460a3932cdac762393a80b"
+    sha256 cellar: :any,                 monterey:       "f7d7b7f41d1a09c1dec45ded9eb24839015fe7a0ddda05ff23e100da52f0c76b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d9e0829d5419fa6bf10c3b9fe284cefb2e69b3fc597c41672bf7ecea8a12c28e"
   end
 
   depends_on "rust" => :build
@@ -70,13 +71,13 @@ class Snakemake < Formula
   end
 
   resource "dpath" do
-    url "https://files.pythonhosted.org/packages/0a/81/044f03129b6006fc594654bb26c22a9417346037261c767ac6e0773ca1dd/dpath-2.1.6.tar.gz"
-    sha256 "f1e07c72e8605c6a9e80b64bc8f42714de08a789c7de417e49c3f87a19692e47"
+    url "https://files.pythonhosted.org/packages/b5/ce/e1fd64d36e4a5717bd5e6b2ad188f5eaa2e902fde871ea73a79875793fc9/dpath-2.2.0.tar.gz"
+    sha256 "34f7e630dc55ea3f219e555726f5da4b4b25f2200319c8e6902c394258dd6a3e"
   end
 
   resource "fastjsonschema" do
-    url "https://files.pythonhosted.org/packages/ba/7f/cedf77ace50aa60c566deaca9066750f06e1fcf6ad24f254d255bb976dd6/fastjsonschema-2.19.1.tar.gz"
-    sha256 "e3126a94bdc4623d3de4485f8d468a12f02a67921315ddc87836d6e456dc789d"
+    url "https://files.pythonhosted.org/packages/03/3f/3ad5e7be13b4b8b55f4477141885ab2364f65d5f6ad5f7a9daffd634d066/fastjsonschema-2.20.0.tar.gz"
+    sha256 "3d48fc5300ee96f5d116f10fe6f28d938e6008f59a6a025c2649475b87f76a23"
   end
 
   resource "gitdb" do
@@ -135,8 +136,8 @@ class Snakemake < Formula
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/ee/b5/b43a27ac7472e1818c4bafd44430e69605baefe1f34440593e0332ec8b4d/packaging-24.0.tar.gz"
-    sha256 "eb82c5e3e56209074766e6885bb04b8c38a0c015d0a30036ebe7ece34c9989e9"
+    url "https://files.pythonhosted.org/packages/51/65/50db4dda066951078f0a96cf12f4b9ada6e4b811516bf0262c0f4f7064d4/packaging-24.1.tar.gz"
+    sha256 "026ed72c8ed3fcce5bf8950572258698927fd1dbda10a5e981cdf0ac37f4f002"
   end
 
   resource "plac" do
@@ -246,8 +247,8 @@ class Snakemake < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/7a/50/7fd50a27caa0652cd4caf224aa87741ea41d3265ad13f010886167cfcc79/urllib3-2.2.1.tar.gz"
-    sha256 "d0570876c61ab9e520d776c38acbbb5b05a776d3f9ff98a5c8fd5162a444cf19"
+    url "https://files.pythonhosted.org/packages/43/6d/fa469ae21497ddc8bc93e5877702dca7cb8f911e337aca7452b5724f1bb6/urllib3-2.2.2.tar.gz"
+    sha256 "dd505485549a7a552833da5e6063639d0d177c04f23bc3864e41e5dc5f612168"
   end
 
   resource "wrapt" do
