@@ -4,25 +4,25 @@ class Ortp < Formula
   license "GPL-3.0-or-later"
 
   stable do
-    url "https://gitlab.linphone.org/BC/public/ortp/-/archive/5.3.63/ortp-5.3.63.tar.bz2"
-    sha256 "597f106519ebc59f4d4a6ee971d42a2ddfc787a44e043128b6d15aa135722b61"
+    url "https://gitlab.linphone.org/BC/public/ortp/-/archive/5.3.74/ortp-5.3.74.tar.bz2"
+    sha256 "a7fef37c8abeb0223738e309d346adaf7efd0c1e8f6bb2780e1a82a65f17326d"
 
     # bctoolbox appears to follow ortp's version. This can be verified at the GitHub mirror:
     # https://github.com/BelledonneCommunications/bctoolbox
     resource "bctoolbox" do
-      url "https://gitlab.linphone.org/BC/public/bctoolbox/-/archive/5.3.63/bctoolbox-5.3.63.tar.bz2"
-      sha256 "4d86996367c72b8575a8a06e88e91724f762e8a004eed10280bf7301cf59c146"
+      url "https://gitlab.linphone.org/BC/public/bctoolbox/-/archive/5.3.74/bctoolbox-5.3.74.tar.bz2"
+      sha256 "d1d72ed6a3812eae7dbbf1b61e4b4c0716a831e86024b1c99ef3f09271eeaa3c"
     end
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "db940139b83cee029aef3283fa0ff7f19b65df6c73c9428929614ef21848a9fe"
-    sha256 cellar: :any,                 arm64_ventura:  "49b65346458882d9febcba1632e763aee68d127f3163cbcb8474238cbe4db1ff"
-    sha256 cellar: :any,                 arm64_monterey: "be1abacc53ec7a16293a80fbdb5700e9aa67e306caede3253cd1be50f9dcf54f"
-    sha256 cellar: :any,                 sonoma:         "81db1213109ef46ac3431c191abe35cc7875837d0c069fed3a550abe47d017dd"
-    sha256 cellar: :any,                 ventura:        "958b69c3a7069a503ea080c746d11f082491d97ba89e966a213a81026ee4c079"
-    sha256 cellar: :any,                 monterey:       "7a682f7fa3ab6036a6e6e05c604c1bc385edb9a5b67605df0f145aaf7431bc4e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cb92d50ddf7bda6bdbc2b52ed8da3b09ce6cb79fb96b97b6c2cd137841254ca8"
+    sha256 cellar: :any,                 arm64_sonoma:   "0309cbc5e519e31fdcb9adb864c2e9ac9c7967cf5aa620bb528757189fc6b60f"
+    sha256 cellar: :any,                 arm64_ventura:  "1bcabac05d20d5abb467a038217212c35a147fe6701c75a944e2a447728dea55"
+    sha256 cellar: :any,                 arm64_monterey: "deb11e8555332505f16a6dbb955ad5657a367309050611d7bd89c06ab6d9d48e"
+    sha256 cellar: :any,                 sonoma:         "394312049c97a6008c2fd7af80367482a6097d8a5ba956e8704a6b2f01977ee9"
+    sha256 cellar: :any,                 ventura:        "bcef4b09d507f5c0e471f7b20b41174c1d9f8df0dfcd19076a918fc9c3ba286e"
+    sha256 cellar: :any,                 monterey:       "cffbcf5b308932be2fe0b855949de43bbb829e44766378f961a21c2a36f03a1a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8e56467a2b805774b20822d7953fe90a05919f0a6580c4cb19f0e9f70d159010"
   end
 
   head do

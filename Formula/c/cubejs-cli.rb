@@ -1,27 +1,25 @@
-require "language/node"
-
 class CubejsCli < Formula
   desc "Cube.js command-line interface"
   homepage "https://cube.dev/"
-  url "https://registry.npmjs.org/cubejs-cli/-/cubejs-cli-0.35.57.tgz"
-  sha256 "d17816a1cdcfe54e71ab07dd455db7321d406a1f354017d4480d066141e6230a"
+  url "https://registry.npmjs.org/cubejs-cli/-/cubejs-cli-0.35.67.tgz"
+  sha256 "5ee5630b42809d57b101ec080e5db4489de33a26a765067486641b02a6eb6d27"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "7bd3b94f3477a51545c4fe2bd36c4daa86835bb5d2f64cf999e38f6cf0baca34"
-    sha256 cellar: :any,                 arm64_ventura:  "7bd3b94f3477a51545c4fe2bd36c4daa86835bb5d2f64cf999e38f6cf0baca34"
-    sha256 cellar: :any,                 arm64_monterey: "7bd3b94f3477a51545c4fe2bd36c4daa86835bb5d2f64cf999e38f6cf0baca34"
-    sha256 cellar: :any,                 sonoma:         "c6e2c510bb1a309cde7261ebdfbbdbfbf2ea142cc5c5d930812c151b88ecde4a"
-    sha256 cellar: :any,                 ventura:        "c6e2c510bb1a309cde7261ebdfbbdbfbf2ea142cc5c5d930812c151b88ecde4a"
-    sha256 cellar: :any,                 monterey:       "c6e2c510bb1a309cde7261ebdfbbdbfbf2ea142cc5c5d930812c151b88ecde4a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8399cbe771fd01076330addb7a5c556a199839bcd112b1a69f39c1bacfac74a8"
+    sha256 cellar: :any,                 arm64_sonoma:   "a1673b25c462e625aec0cb11b122ec57ac427e14dde0bb87b912837e11e0782e"
+    sha256 cellar: :any,                 arm64_ventura:  "a1673b25c462e625aec0cb11b122ec57ac427e14dde0bb87b912837e11e0782e"
+    sha256 cellar: :any,                 arm64_monterey: "a1673b25c462e625aec0cb11b122ec57ac427e14dde0bb87b912837e11e0782e"
+    sha256 cellar: :any,                 sonoma:         "9c533f1f78f49e750472fde04bc0fee1dc803b24cbf0c9cb7cef69ee110ef66f"
+    sha256 cellar: :any,                 ventura:        "9c533f1f78f49e750472fde04bc0fee1dc803b24cbf0c9cb7cef69ee110ef66f"
+    sha256 cellar: :any,                 monterey:       "9c533f1f78f49e750472fde04bc0fee1dc803b24cbf0c9cb7cef69ee110ef66f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ed5173a08dccd4adbf90e9822a7a6eb22e1b86101c7bdafdece14197c1090996"
   end
 
   depends_on "node"
   uses_from_macos "zlib"
 
   def install
-    system "npm", "install", *Language::Node.std_npm_install_args(libexec)
+    system "npm", "install", *std_npm_args
     bin.install_symlink Dir["#{libexec}/bin/*"]
   end
 

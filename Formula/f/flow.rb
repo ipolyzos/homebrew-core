@@ -1,19 +1,19 @@
 class Flow < Formula
   desc "Static type checker for JavaScript"
   homepage "https://flow.org/"
-  url "https://github.com/facebook/flow/archive/refs/tags/v0.239.0.tar.gz"
-  sha256 "f2162be43535e3998de29649426953020a05ff05b9b1e763691db03b0144d9bc"
+  url "https://github.com/facebook/flow/archive/refs/tags/v0.243.0.tar.gz"
+  sha256 "6d8b77958e17923f5b1f5fab8b9bf46e082c9227ed9d9471959ff6eb87e26807"
   license "MIT"
   head "https://github.com/facebook/flow.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "40a2822821b0aecd4cd1758443d7ffa757e26c53ba98dffaa07b475fbbff0e8a"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "edaf0a861cd304f917a95e35aacf205c1a144ac7067f937cb6d195c9b79bcb99"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4cd2508263021e2b0b1573c42f46595256dec22f7a412cef6763a0d91d3e4746"
-    sha256 cellar: :any_skip_relocation, sonoma:         "47707e980c8929b2a841f6aa45ee969acd3ac8e0c051a1eec17fae51b2a2a049"
-    sha256 cellar: :any_skip_relocation, ventura:        "fb2eefd924a756e5a729d2de5d90231f1eb3d4dca34ade270434dc8b05414513"
-    sha256 cellar: :any_skip_relocation, monterey:       "b6743e45bad10a812bd081b69971e2529e2e640dd8a3e31db43484e98e6ab441"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d2c3e673dcd9a36d6dbda5c31399a881b7e60726b59c1b6d3d006cbd6b6537f0"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "6c67718dbcf9d4b7b75cd270421b9f8bb90dd10b5ad69e6a4091fec9cf186cea"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "183a0043269aee9c5b828439e5f97014f958c81ce01bce1a4d67d16f7c97ac16"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "61d82da435c902463d44a4b705d2d91cb0dc5ff646ac740a7a7be35955261b55"
+    sha256 cellar: :any_skip_relocation, sonoma:         "5ef2a8798dfadfe0c01ba542811a52153300aa1f14ccbcfe29b1b820efc5bf45"
+    sha256 cellar: :any_skip_relocation, ventura:        "abddb4c3c73c748bfcbc5fce098bf59107f1ce0d4a0533d38cd857b3c7815bd4"
+    sha256 cellar: :any_skip_relocation, monterey:       "6bc9219bc30bdf5eef595e4a0435818ccc41183da2e5360ae8f9e5c6090c0040"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0c6d9ea036b414030dbfcbd5c4074e9774efbb4088fc9d56cbf4c43e328ae855"
   end
 
   depends_on "ocaml" => :build
@@ -35,7 +35,7 @@ class Flow < Formula
   end
 
   test do
-    system "#{bin}/flow", "init", testpath
+    system bin/"flow", "init", testpath
     (testpath/"test.js").write <<~EOS
       /* @flow */
       var x: string = 123;

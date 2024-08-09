@@ -1,8 +1,8 @@
 class Nss < Formula
   desc "Libraries for security-enabled client and server applications"
   homepage "https://firefox-source-docs.mozilla.org/security/nss/index.html"
-  url "https://ftp.mozilla.org/pub/security/nss/releases/NSS_3_101_1_RTM/src/nss-3.101.1.tar.gz"
-  sha256 "f20e8c5daafd89419d229ec8c54100a5c320dce1467377c9dfcd5e4d8446b468"
+  url "https://ftp.mozilla.org/pub/security/nss/releases/NSS_3_102_1_RTM/src/nss-3.102.1.tar.gz"
+  sha256 "54982d3587e41579c94f2036ba084438b073f8456bbd873b7a942c057e9737cc"
   license "MPL-2.0"
 
   livecheck do
@@ -14,13 +14,13 @@ class Nss < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "a16d2c10849ac9c9ea8e6f9c4c3180bde386d12d252eccd65c9012fe64e40d66"
-    sha256 cellar: :any,                 arm64_ventura:  "63ffe9ce38bb40d97e00106668fc2b7bba140aef8049e91afe720f9efe82b946"
-    sha256 cellar: :any,                 arm64_monterey: "bf50a633fcf3a064f18d217b89136c0522e303f07ddd4dce5ed94038170b21e8"
-    sha256 cellar: :any,                 sonoma:         "9e88ad48ace8478008bada60d5b5b7c6497d2808b2256fae21d6641ff093ebbf"
-    sha256 cellar: :any,                 ventura:        "d92d11ccee5c58f33105143d3857daf27059159bddb87106f959ab33641c5378"
-    sha256 cellar: :any,                 monterey:       "2725afdb9ef2da99156e8b384bc688ce49bb1b894fb369c9b195fe89a13d97f8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7e20b6aa558a4938287cb552ee978136ad64717d9cfd359b7487a27ece7d7058"
+    sha256 cellar: :any,                 arm64_sonoma:   "9af7955c99444938689c45fbca3594308a76a581708232a40f0fcd7d3ce79afe"
+    sha256 cellar: :any,                 arm64_ventura:  "0d7d560e66de646f004d57b59280158a0296c30c99bf7099f44a635e8888d952"
+    sha256 cellar: :any,                 arm64_monterey: "583c71f39811640fe28297dd1286077416c3fa9e0548ff42933dafe2ffc81d6e"
+    sha256 cellar: :any,                 sonoma:         "3fd7287a19b67f248e37148b18e8fa42d481bd07380ba24e8228367ba4d9baae"
+    sha256 cellar: :any,                 ventura:        "386884cd128cadd518d02094a96c1e2887d640ab7e4be7ef69c55ecc276b1834"
+    sha256 cellar: :any,                 monterey:       "0b9bd99f56dffb9602b0e608708d95000bd4e1ffeb9159b929982c3bf373bdb9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bf8e2d0888feda8a75c3baf4dbe1a9684b6d198a482585701c810ca514eb2aba"
   end
 
   depends_on "nspr"
@@ -84,8 +84,8 @@ class Nss < Formula
   test do
     # See: https://developer.mozilla.org/docs/Mozilla/Projects/NSS/tools/NSS_Tools_certutil
     (testpath/"passwd").write("It's a secret to everyone.")
-    system "#{bin}/certutil", "-N", "-d", pwd, "-f", "passwd"
-    system "#{bin}/certutil", "-L", "-d", pwd
+    system bin/"certutil", "-N", "-d", pwd, "-f", "passwd"
+    system bin/"certutil", "-L", "-d", pwd
   end
 
   # A very minimal nss-config for configuring firefox etc. with this nss,
