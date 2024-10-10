@@ -234,6 +234,7 @@ bkt
 black
 blast
 blis
+blisp
 blocky
 bluepill
 blueutil
@@ -830,6 +831,7 @@ fastlane
 fastnetmon
 fastp
 fastqc
+fatal
 faudio
 fauna-shell
 faust
@@ -1390,6 +1392,7 @@ kics
 killport
 kin
 kind
+kiota
 kitchen-sync
 kitex
 klee
@@ -1876,6 +1879,7 @@ naabu
 nagios
 nagios-plugins
 nano
+nanobind
 nanoflann
 nanopb
 nasm
@@ -1969,6 +1973,7 @@ nvm
 nvtop
 nzbget
 oasdiff
+oath-toolkit
 oauth2_proxy
 oauth2c
 objfw
@@ -2360,6 +2365,7 @@ repo
 reposurgeon
 reproc
 restic
+restview
 resvg
 retire
 revive
@@ -2772,6 +2778,7 @@ tkey-ssh-agent
 tlsx
 tmpmail
 tmux-mem-cpu-load
+tmux-sessionizer
 tmux-xpanes
 tmuxp
 tmx
