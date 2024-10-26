@@ -545,6 +545,7 @@ crispy-doom
 croaring
 croc
 cromwell
+crossplane
 crow
 crowdin
 crun
