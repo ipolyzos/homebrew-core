@@ -397,7 +397,6 @@ chatblade
 cheat
 check-jsonschema
 checkbashisms
-checkdmarc
 checkmake
 checkov
 checkstyle
@@ -545,6 +544,7 @@ crispy-doom
 croaring
 croc
 cromwell
+crossplane
 crow
 crowdin
 crun
@@ -621,6 +621,7 @@ deployer
 der-ascii
 derby
 descope
+desktop-file-utils
 detect-secrets
 detekt
 detox
@@ -1550,6 +1551,8 @@ libgedit-gfls
 libgedit-gtksourceview
 libgeotiff
 libgetdata
+libgit2
+libgit2@1.7
 libgpg-error
 libgr
 libgsf
@@ -2367,6 +2370,7 @@ rabbitmq
 radamsa
 radare2
 railway
+rakudo-star
 rancher-cli
 rapidfuzz-cpp
 ratchet
@@ -2473,7 +2477,6 @@ s3scanner
 s6
 sad
 saf-cli
-safety
 sagittarius-scheme
 samba
 saml2aws
