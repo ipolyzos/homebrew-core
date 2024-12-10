@@ -739,6 +739,7 @@ dooit
 doppler
 dosbox-staging
 dosbox-x
+dotbot
 dotenv-linter
 dotnet
 dotslash
@@ -1872,6 +1873,7 @@ mariadb@10.5
 mariadb@10.6
 mariadb@11.2
 mariadb@11.4
+markdown-oxide
 markdownlint-cli
 markdownlint-cli2
 marked
@@ -2520,6 +2522,7 @@ rancher-cli
 ranger
 rapidfuzz-cpp
 ratchet
+ratfor
 rattler-build
 rav1e
 raven
@@ -2857,6 +2860,7 @@ stow
 stp
 strace
 streamlink
+streamvbyte
 stress-ng
 stripe-cli
 stripe-mock
@@ -2910,6 +2914,7 @@ talisman
 tanka
 taplo
 tarantool
+tarlz
 tartufo
 task
 taskopen
