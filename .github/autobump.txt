@@ -144,6 +144,7 @@ auditbeat
 auditwheel
 austin
 autobrr
+autoconf-archive
 autodiff
 automake
 autopep8
@@ -389,6 +390,7 @@ cctz
 cdebug
 cdk
 cdk8s
+cdktf
 cdogs-sdl
 cdsclient
 cdxgen
@@ -559,6 +561,7 @@ cortex
 cosign
 cotila
 cotp
+coturn
 couchbase-shell
 couchdb
 countdown
@@ -582,6 +585,7 @@ cpuid
 cql-proxy
 crabz
 crane
+crates-tui
 cri-tools
 crispy-doom
 croaring
@@ -739,6 +743,7 @@ dooit
 doppler
 dosbox-staging
 dosbox-x
+dotbot
 dotenv-linter
 dotnet
 dotslash
@@ -835,6 +840,7 @@ embree
 emqx
 emscripten
 enchant
+energy
 enet
 enpass-cli
 ensmallen
@@ -1194,6 +1200,7 @@ gource
 govc
 govulncheck
 gowsdl
+gpa
 gpac
 gperftools
 gpg-tui
@@ -1212,6 +1219,7 @@ grails
 grap
 graph-tool
 graphicsmagick
+graphql-inspector
 graphqurl
 graphqxl
 graphviz
@@ -1306,6 +1314,7 @@ hopenpgp-tools
 hoverfly
 howard-hinnant-date
 hpack
+hsd
 htmldoc
 htmlq
 htmltest
@@ -1843,12 +1852,14 @@ lz4
 lzip
 macchina
 mackup
+macmon
 mactop
 mafft
 mage
 magic-wormhole
 magic-wormhole.rs
 magic_enum
+mago
 mailcatcher
 mailpit
 mailsy
@@ -1872,6 +1883,7 @@ mariadb@10.5
 mariadb@10.6
 mariadb@11.2
 mariadb@11.4
+markdown-oxide
 markdownlint-cli
 markdownlint-cli2
 marked
@@ -2415,6 +2427,7 @@ proto
 protobuf
 protoc-gen-go
 protoc-gen-go-grpc
+protoc-gen-grpc-java
 protoc-gen-grpc-web
 protolint
 prowler
@@ -2520,6 +2533,7 @@ rancher-cli
 ranger
 rapidfuzz-cpp
 ratchet
+ratfor
 rattler-build
 rav1e
 raven
@@ -2552,6 +2566,7 @@ remind
 renovate
 repo
 reposurgeon
+repren
 reproc
 restic
 restview
@@ -2857,6 +2872,7 @@ stow
 stp
 strace
 streamlink
+streamvbyte
 stress-ng
 stripe-cli
 stripe-mock
@@ -2910,6 +2926,7 @@ talisman
 tanka
 taplo
 tarantool
+tarlz
 tartufo
 task
 taskopen
@@ -2918,6 +2935,7 @@ tbls
 tbox
 tccutil
 tcl-tk
+tcl-tk@8
 tcpdump
 tcpreplay
 tcsh
@@ -2938,6 +2956,7 @@ telnetd
 template-glib
 temporal
 tendermint
+tenere
 tengo
 tenv
 tere
@@ -3085,6 +3104,7 @@ urdfdom
 urdfdom_headers
 uriparser
 urlscan
+urlwatch
 usb.ids
 usbredir
 usbutils
@@ -3124,6 +3144,7 @@ verapdf
 vercel-cli
 verilator
 verovio
+versitygw
 vet
 vexctl
 vfox

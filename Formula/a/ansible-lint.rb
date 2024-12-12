@@ -3,18 +3,17 @@ class AnsibleLint < Formula
 
   desc "Checks ansible playbooks for practices and behaviour"
   homepage "https://ansible-lint.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/7b/2a/5f85804b10cfda961c27d6ea110327e53e43d667fc5d071faa3017f948ad/ansible_lint-24.10.0.tar.gz"
-  sha256 "59b396bcd9be734f9ae40796e9660c267ae85f1f13e47811fd8abdc6aaffea5c"
+  url "https://files.pythonhosted.org/packages/69/1a/597cda86ee5f990845847d4d9ccff7ef7cfab022a831e63f6fe9c6ec039f/ansible_lint-24.12.1.tar.gz"
+  sha256 "3a69e9187b405c0c11ba2e8f7c3e37d8d783bd482eaf5feaa60cf58d387ae18d"
   license all_of: ["MIT", "GPL-3.0-or-later"]
-  revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "376bf54c928df79d52e08b3d6b077d2a95c10466ff3c918d4dbddd3e5493c18e"
-    sha256 cellar: :any,                 arm64_sonoma:  "846f8a2d6c66ca19b80f3d631fe7919e9bc2b896f2b197e7a266b2cce2c50fa2"
-    sha256 cellar: :any,                 arm64_ventura: "151308e04527d1c06e36b88f752d1cc8ebb4bebcbc7cea12bf225890ae94b852"
-    sha256 cellar: :any,                 sonoma:        "7d48e5d95742c7472c03375897307d8d64729b481cf582869b2c543bccdde6bc"
-    sha256 cellar: :any,                 ventura:       "bd5549d31b712c69e8f34d16efd0fd5a28ce68ff9f630e60a2f92ba1e7d31411"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0052efc18d6e2896fab4edc10d29bb84f02b30303e5817010023afcc7e3fc7ac"
+    sha256 cellar: :any,                 arm64_sequoia: "f6a869f39f27544e45f73e5299212bb984a399dc49ed7ffb483c74149e3de9c2"
+    sha256 cellar: :any,                 arm64_sonoma:  "fe8dbf228148ca1fbbca622f4e2e3021afa1d833d1f16933ab8637a63f61c48e"
+    sha256 cellar: :any,                 arm64_ventura: "d770a02f6dd0699ef29d69b1f8aa3ad56387cb50c24cb701856497abc7216998"
+    sha256 cellar: :any,                 sonoma:        "a9b36bb129057e2d33729037d16afe51795f14ac44f0dbc44b7782bceedc1ac6"
+    sha256 cellar: :any,                 ventura:       "f612135725cbc57cba48cf04aa30b82f2aabc54165896e810fed179618565312"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5c10abd8f5a75fd0724d060dbb12badbbb095a441231695b03c45a9a58907293"
   end
 
   depends_on "pkgconf" => :build
@@ -79,19 +78,9 @@ class AnsibleLint < Formula
     sha256 "0f38b83639958ce1152d02a7f062902c41c8fd20d558b0c34344292d417ae272"
   end
 
-  resource "markdown-it-py" do
-    url "https://files.pythonhosted.org/packages/38/71/3b932df36c1a044d397a1f92d1cf91ee0a503d91e470cbd670aa66b07ed0/markdown-it-py-3.0.0.tar.gz"
-    sha256 "e3f60a94fa066dc52ec76661e37c851cb232d92f9886b15cb560aaada2df8feb"
-  end
-
   resource "markupsafe" do
     url "https://files.pythonhosted.org/packages/b2/97/5d42485e71dfc078108a86d6de8fa46db44a1a9295e89c5d6d4a06e23a62/markupsafe-3.0.2.tar.gz"
     sha256 "ee55d3edf80167e48ea11a923c7386f4669df67d7994554387f84e7d8b0a2bf0"
-  end
-
-  resource "mdurl" do
-    url "https://files.pythonhosted.org/packages/d6/54/cfe61301667036ec958cb99bd3efefba235e65cdeb9c84d24a8293ba1d90/mdurl-0.1.2.tar.gz"
-    sha256 "bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba"
   end
 
   resource "mypy-extensions" do
@@ -114,11 +103,6 @@ class AnsibleLint < Formula
     sha256 "357fb2acbc885b0419afd3ce3ed34564c13c9b95c89360cd9563f73aa5e2b907"
   end
 
-  resource "pygments" do
-    url "https://files.pythonhosted.org/packages/8e/62/8336eff65bcbc8e4cb5d05b55faf041285951b6e80f33e2bff2024788f31/pygments-2.18.0.tar.gz"
-    sha256 "786ff802f32e91311bff3889f6e9a86e81505fe99f2735bb6d60ae0c5004f199"
-  end
-
   resource "pyyaml" do
     url "https://files.pythonhosted.org/packages/54/ed/79a089b6be93607fa5cdaedf301d7dfb23af5f25c398d5ead2525b063e17/pyyaml-6.0.2.tar.gz"
     sha256 "d584d9ec91ad65861cc08d42e834324ef890a082e591037abe114850ff7bbc3e"
@@ -134,14 +118,9 @@ class AnsibleLint < Formula
     sha256 "04ce76cbd63fded2078ce224785da6ecd42b9564b1390793f64ddecbe997b309"
   end
 
-  resource "rich" do
-    url "https://files.pythonhosted.org/packages/ab/3a/0316b28d0761c6734d6bc14e770d85506c986c85ffb239e688eeaab2c2bc/rich-13.9.4.tar.gz"
-    sha256 "439594978a49a09530cff7ebc4b5c7103ef57baf48d5ea3184f21d9a2befa098"
-  end
-
   resource "rpds-py" do
-    url "https://files.pythonhosted.org/packages/52/bb/4a7bd48830ae7366467c09923a2ffab45bf76102a87d97ff24cdcebcda5c/rpds_py-0.22.0.tar.gz"
-    sha256 "32de71c393f126d8203e9815557c7ff4d72ed1ad3aa3f52f6c7938413176750a"
+    url "https://files.pythonhosted.org/packages/01/80/cce854d0921ff2f0a9fa831ba3ad3c65cee3a46711addf39a2af52df2cfd/rpds_py-0.22.3.tar.gz"
+    sha256 "e32fee8ab45d3c2db6da19a5323bc3362237c8b653c70194414b892fd06a080d"
   end
 
   resource "ruamel-yaml" do
