@@ -1,17 +1,13 @@
 class Glaze < Formula
   desc "Extremely fast, in-memory JSON and interface library for modern C++"
   homepage "https://github.com/stephenberry/glaze"
-  url "https://github.com/stephenberry/glaze/archive/refs/tags/v4.2.1.tar.gz"
-  sha256 "e9e267782f350ce507e27bafd7db696dc1405d0571f2613ae90299354584b0c7"
+  url "https://github.com/stephenberry/glaze/archive/refs/tags/v4.2.2.tar.gz"
+  sha256 "965e32de67e60d185402e8cfe684c6d40c1f018a4fa5e781b11b0cac0817edb9"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "824e409636a66e392e1ea2f0c74407cf7c858c98d9694f98e9d3e2f6e41ac77e"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "824e409636a66e392e1ea2f0c74407cf7c858c98d9694f98e9d3e2f6e41ac77e"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "824e409636a66e392e1ea2f0c74407cf7c858c98d9694f98e9d3e2f6e41ac77e"
-    sha256 cellar: :any_skip_relocation, sonoma:        "824e409636a66e392e1ea2f0c74407cf7c858c98d9694f98e9d3e2f6e41ac77e"
-    sha256 cellar: :any_skip_relocation, ventura:       "824e409636a66e392e1ea2f0c74407cf7c858c98d9694f98e9d3e2f6e41ac77e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9a01a3c7c004318744d3089c916dba9887d83224a661f622a0eafe1c13df2b41"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "56bdb808a3c912d74407fb07753e2992ff8d5d451eeec4138a6583183bbb280a"
   end
 
   depends_on "cmake" => [:build, :test]
@@ -21,6 +17,7 @@ class Glaze < Formula
     args = %w[
       -Dglaze_DEVELOPER_MODE=OFF
     ]
+    args << "-Dglaze_ENABLE_AVX2=#{(!build.bottle? && Hardware::CPU.intel?) ? "ON" : "OFF"}"
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
