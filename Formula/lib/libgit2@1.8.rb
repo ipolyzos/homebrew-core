@@ -1,24 +1,25 @@
-class Libgit2 < Formula
+class Libgit2AT18 < Formula
   desc "C library of Git core methods that is re-entrant and linkable"
   homepage "https://libgit2.github.com/"
-  url "https://github.com/libgit2/libgit2/archive/refs/tags/v1.9.0.tar.gz"
-  sha256 "75b27d4d6df44bd34e2f70663cfd998f5ec41e680e1e593238bbe517a84c7ed2"
+  url "https://github.com/libgit2/libgit2/archive/refs/tags/v1.8.4.tar.gz"
+  sha256 "49d0fc50ab931816f6bfc1ac68f8d74b760450eebdb5374e803ee36550f26774"
   license "GPL-2.0-only" => { with: "GCC-exception-2.0" }
-  head "https://github.com/libgit2/libgit2.git", branch: "main"
 
   livecheck do
     url :stable
-    strategy :github_latest
+    regex(/^v?(1\.8(?:\.\d+)+)$/i)
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "f0ee705c27e87553582c58556a2a20a766af1e1ffbef0f1c676b0244e89398b9"
-    sha256 cellar: :any,                 arm64_sonoma:  "74a27239cf67c5e87b45b9cf3db547a41ace91b9fab9dbd44608bf1dc3faf3df"
-    sha256 cellar: :any,                 arm64_ventura: "ff62b8ec0e1a2b212eff271c39bbd801c45b4bba3595b3f361b7d90f5b3d11b3"
-    sha256 cellar: :any,                 sonoma:        "fb233893f22e55ca0cd7856f5ec319d077530ad1a5341c3c067d53ce2135627d"
-    sha256 cellar: :any,                 ventura:       "f5eb731a1908b229c0f7da31345af99a176c51f813069401884aada234c1247c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "be9b0548c38c23f5ef5cecb22db883a65324ef385610f944e4506af6cf077aad"
+    sha256 cellar: :any,                 arm64_sequoia: "5a9fe4aae3865e5c977633107b829e639e6535d8f986c851d60d63bb2e5b0932"
+    sha256 cellar: :any,                 arm64_sonoma:  "d04a13a2da8d14c6f0bee82751d472b13aa0fd8ed688eff218f7a0a18d29bf59"
+    sha256 cellar: :any,                 arm64_ventura: "94ef273252c464c308e859ebfb3b78814516f6a740d40c57394805c4fbcbcb58"
+    sha256 cellar: :any,                 sonoma:        "4848894348322217f276122ab1d3307778f473430abbc51dc22818273b06cf83"
+    sha256 cellar: :any,                 ventura:       "9a389072e0da2cb33c2c82bf7d57c49844c92c82be47d19f7e25f0b6666aa8c2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "105c2c951f86f9de73797b314f92b46bddab6b6bb779cee7303d9eebec8a1c18"
   end
+
+  keg_only :versioned_formula
 
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
@@ -26,7 +27,7 @@ class Libgit2 < Formula
   uses_from_macos "zlib"
 
   on_linux do
-    depends_on "openssl@3" # Uses SecureTransport on macOS
+    depends_on "openssl@3" # Uses SecureTransport on macOS.
   end
 
   def install
