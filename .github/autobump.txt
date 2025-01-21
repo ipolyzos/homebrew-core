@@ -262,6 +262,7 @@ bind
 bindfs
 bindgen
 bingrep
+binocle
 binsider
 biodiff
 biome
@@ -284,6 +285,7 @@ bluez
 bmake
 bnd
 bob
+bold
 bomber
 bore-cli
 borgbackup
@@ -333,6 +335,7 @@ c-ares
 c-blosc
 c-blosc2
 c2048
+c2patool
 c2rust
 c3c
 c4core
@@ -364,6 +367,7 @@ cargo-binstall
 cargo-bloat
 cargo-bundle
 cargo-c
+cargo-cache
 cargo-chef
 cargo-crev
 cargo-cyclonedx
@@ -684,6 +688,7 @@ dbml-cli
 dbus
 dcd
 dcm2niix
+ddclient
 ddcutil
 ddns-go
 ddrescue
@@ -717,6 +722,7 @@ dhall
 dhall-bash
 dhall-json
 dhall-lsp-server
+dhall-toml
 dhall-yaml
 di
 dialog
@@ -1161,6 +1167,7 @@ gittuf
 gitu
 giza
 gjs
+gkrellm
 glances
 glassfish
 glasskube
@@ -1205,6 +1212,7 @@ goaccess
 goawk
 gobject-introspection
 gocloc
+gocryptfs
 goctl
 godap
 goffice
@@ -1330,6 +1338,7 @@ haskell-stack
 hatari
 hatch
 havn
+hawkeye
 haxe
 hbase
 hblock
@@ -1347,6 +1356,7 @@ helmfile
 helmify
 helmsman
 hermit
+hevi
 hexo
 hexyl
 hfstospell
@@ -1514,6 +1524,7 @@ jsdoc3
 jsign
 json-fortran
 json-glib
+json2hcl
 json2ts
 json2tsv
 jsoncpp
@@ -1554,6 +1565,7 @@ kcov
 kcptun
 kea
 keep-sorted
+keploy
 kepubify
 kerl
 kew
@@ -1892,6 +1904,7 @@ lightgbm
 lighthouse
 lightning
 lighttpd
+lilv
 lima
 limbo
 link-grammar
@@ -1974,6 +1987,7 @@ mako
 malcontent
 man-db
 manifest-tool
+manim
 manticoresearch
 mantra
 mapcidr
@@ -2313,6 +2327,7 @@ opencl-clhpp-headers
 opencl-headers
 opencl-icd-loader
 opencolorio
+opencsg
 opendetex
 opendht
 openexr
@@ -2560,6 +2575,7 @@ primecount
 primesieve
 principalmapper
 prism-cli
+privoxy
 probe-rs-tools
 procps
 procs
@@ -2870,12 +2886,14 @@ seqkit
 sequin
 sequoia-sq
 ser2net
+serd
 serf
 serialosc
 serie
 serpl
 service-weaver
 sesh
+sextractor
 sf
 sfcgal
 sfml
@@ -2963,6 +2981,7 @@ soapyremote
 socat
 socket_vmnet
 solana
+solargraph
 solhint
 sollya
 solr
@@ -2975,6 +2994,7 @@ sonobuoy
 sophus
 soplex
 sops
+sord
 sound-touch
 source-to-image
 sourcekitten
@@ -3012,6 +3032,7 @@ squashfuse
 squealer
 squid
 squiid
+sratom
 sratoolkit
 src
 srgn
@@ -3063,9 +3084,11 @@ subfinder
 subliminal
 subnetcalc
 subversion
+suil
 suite-sparse
 sundials
 superfile
+superhtml
 superlu
 surfer
 suricata
@@ -3552,6 +3575,7 @@ zig
 zigmod
 zim
 zipkin
+zix
 zizmor
 zk
 zlib
