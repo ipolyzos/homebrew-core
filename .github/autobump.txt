@@ -313,6 +313,7 @@ bowtie2
 box2d
 boxes
 bpftop
+bpmnlint
 braid
 breezy
 brev
@@ -441,6 +442,7 @@ cern-ndiff
 certifi
 certigo
 cf
+cf-terraforming
 cf2tf
 cfengine
 cffi
@@ -600,6 +602,7 @@ consul-template
 container-structure-test
 contentful-cli
 convco
+convmv
 convox
 cookiecutter
 copa
@@ -959,7 +962,9 @@ exult
 eza
 f2
 f3d
+faac
 faas-cli
+fabio
 fabric
 fabric-installer
 facad
@@ -969,6 +974,7 @@ faiss
 fakeroot
 falco
 falcoctl
+fancy-cat
 fantom
 fanyi
 fast_float
@@ -1172,6 +1178,7 @@ ginac
 gismo
 git-absorb
 git-annex
+git-cinnabar
 git-cliff
 git-codereview
 git-cola
@@ -1223,6 +1230,7 @@ glibmm@2.66
 glider
 glm
 global
+globstar
 glooctl
 glow
 glslang
@@ -1297,6 +1305,7 @@ gotestsum
 gotestwaf
 gotify
 gotpm
+gotz
 gource
 govc
 govulncheck
@@ -1340,6 +1349,7 @@ groovy
 groovysdk
 grpc
 grpc-swift
+grpcui
 grype
 gsan
 gsettings-desktop-schemas
@@ -1418,6 +1428,7 @@ hidapi
 highlight
 highs
 himalaya
+hishtory
 hive
 hivemind
 hivex
@@ -1482,6 +1493,7 @@ imgdiet
 imgp
 imgproxy
 immich-cli
+immich-go
 immortal
 immudb
 imposm3
@@ -1615,6 +1627,7 @@ k6
 k8sgpt
 k9s
 kafka
+kafkactl
 kahip
 kakoune
 kalker
@@ -1623,6 +1636,7 @@ kamal-proxy
 kamel
 kanata
 kapacitor
+kapp
 karmadactl
 kaskade
 katana
@@ -1648,6 +1662,7 @@ killport
 kin
 kind
 kiota
+kirimase
 kitchen-sync
 kitex
 klee
@@ -2034,6 +2049,7 @@ lttng-ust
 lua
 luacheck
 luajit-openresty
+luanti
 luarocks
 luau
 lucky-commit
@@ -2159,8 +2175,8 @@ millet
 mimalloc
 mimirtool
 minder
-minetest
 minica
+minicom
 minigraph
 minijinja-cli
 minikube
@@ -2341,6 +2357,7 @@ notation
 notcurses
 notify
 nox
+nping
 npm-check-updates
 npth
 nq
@@ -2479,6 +2496,7 @@ orbuculum
 orc
 orc-tools
 ord
+org-formation
 orgalorg
 orientdb
 ormolu
@@ -2498,6 +2516,7 @@ osv-scanner
 otree
 ots
 ott
+ov
 overarch
 overmind
 overtls
@@ -2645,6 +2664,7 @@ po4a
 pocketbase
 pocl
 poco
+pocsuite3
 pod2man
 podlet
 podman
@@ -2724,6 +2744,7 @@ pueue
 pug
 pugixml
 pulsarctl
+punktf
 pure
 pure-ftpd
 purescript
@@ -3000,6 +3021,8 @@ sdl2_mixer
 sdl2_sound
 sdl2_ttf
 sdl3
+sdl3_image
+sdl3_ttf
 sdns
 seal
 seam
@@ -3139,6 +3162,7 @@ spacer
 spack
 spades
 spatialindex
+spawn-fcgi
 spdlog
 spectra
 spectral-cli
@@ -3220,6 +3244,7 @@ stripe-cli
 stripe-mock
 strongswan
 structurizr-cli
+sttr
 stunnel
 stylelint
 stylish-haskell
@@ -3374,6 +3399,7 @@ tippecanoe
 titlecase
 tkey-ssh-agent
 tlsx
+tml
 tmpmail
 tmt
 tmux-mem-cpu-load
@@ -3382,6 +3408,7 @@ tmux-xpanes
 tmuxp
 tmx
 toast
+todoist
 todoman
 tofuenv
 toipe
@@ -3416,6 +3443,7 @@ translate-toolkit
 transmission-cli
 trash-cli
 travis
+trdsql
 tree
 tree-sitter
 treefmt
@@ -3668,6 +3696,7 @@ xfig
 xgboost
 xh
 xinit
+xk6
 xkbcomp
 xkeyboardconfig
 xlsxio
@@ -3712,6 +3741,7 @@ yices2
 ykman
 yle-dl
 yo
+yoke
 yor
 yorkie
 yosys
@@ -3722,6 +3752,7 @@ youtubeuploader
 yozefu
 yq
 yt-dlp
+ytt
 yubico-piv-tool
 yyjson
 z.lua
