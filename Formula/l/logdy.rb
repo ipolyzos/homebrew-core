@@ -1,17 +1,17 @@
 class Logdy < Formula
   desc "Web based real-time log viewer"
   homepage "https://logdy.dev"
-  url "https://github.com/logdyhq/logdy-core/archive/refs/tags/v0.14.1.tar.gz"
-  sha256 "fd9334f0b865333cf97e8b479d428247cf4e9e12c9a68b6fb25be48931a27464"
+  url "https://github.com/logdyhq/logdy-core/archive/refs/tags/v0.16.0.tar.gz"
+  sha256 "c9db35d4dfe619ec7af79324568c17db373eb3266f88a25de291cec636a5a1d0"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "38634f61a179cc18189024802a6fc2ac62862892974caabd80ba350d3a4b5d3e"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "38634f61a179cc18189024802a6fc2ac62862892974caabd80ba350d3a4b5d3e"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "38634f61a179cc18189024802a6fc2ac62862892974caabd80ba350d3a4b5d3e"
-    sha256 cellar: :any_skip_relocation, sonoma:        "cd989e0d0dfd03fb13c5ed2ea7180c1f7b06131006a33032b4e4bade625c6809"
-    sha256 cellar: :any_skip_relocation, ventura:       "cd989e0d0dfd03fb13c5ed2ea7180c1f7b06131006a33032b4e4bade625c6809"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "806e394f11925a1b278f9a76b23e325ab09f158fe07fcce619cb572a53dc225d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f824b88435510732a6b795cf100cd9de6249febc70afa7d339d817a7d7f31739"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f824b88435510732a6b795cf100cd9de6249febc70afa7d339d817a7d7f31739"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "f824b88435510732a6b795cf100cd9de6249febc70afa7d339d817a7d7f31739"
+    sha256 cellar: :any_skip_relocation, sonoma:        "e48f5faaa1c82aff7dffaa7d9fc55b1b2552b60ca51c3921133eb950402d2891"
+    sha256 cellar: :any_skip_relocation, ventura:       "e48f5faaa1c82aff7dffaa7d9fc55b1b2552b60ca51c3921133eb950402d2891"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dee1e1e42f5737edbf37da5cb2c2a16882702063a656436e71af979d6c2ed31f"
   end
 
   depends_on "go" => :build

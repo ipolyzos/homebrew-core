@@ -1,17 +1,17 @@
 class Mago < Formula
   desc "Toolchain for PHP to help developers write better code"
   homepage "https://github.com/carthage-software/mago"
-  url "https://github.com/carthage-software/mago/archive/refs/tags/0.13.1.tar.gz"
-  sha256 "14ece8f95ba80156a00938deda69bd36067bf7732772fbc4bc0687274ef38485"
+  url "https://github.com/carthage-software/mago/archive/refs/tags/0.19.0.tar.gz"
+  sha256 "8ff9f951a437464035c17898a2153aa103e11c566861b6052a4cc1e6f2f25a49"
   license any_of: ["Apache-2.0", "MIT"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d39f4a1ecb4785bc41a159c5507afdc3285f906d5b01bce6384af12cd74eda5d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "95173fb5c53993575e7229339a6201fcfce1bcfe769d144f9b4f8538d2826cb3"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "46ad6e082ac20259e7a3a82e8898813a2938fb1fb0ec75f36b750cb4d46a2261"
-    sha256 cellar: :any_skip_relocation, sonoma:        "51e2c861e0ae3c07c95dd144a89eba393f7fbfd49b4a89ef813c9cd99e058bad"
-    sha256 cellar: :any_skip_relocation, ventura:       "b1cb3125059726777896521da7d508880de27f6d643fa4a31d8796f4be0740ea"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5a664d52bb5e1f248b751b8bd804218e7c2053596df98045b8cd3dbb4963eb8f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d7a5cce23659b501f2ca29173b366b55f97d3cc2e95deb7ef524d4eecddc9580"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "01b945e285e3115c78813f7498c84a557dd2ec4a291de839add3f90305e3cac5"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "d4de34a6369cb7c94edfe4558786eb00111ec8f4612bc7432125f50025f07185"
+    sha256 cellar: :any_skip_relocation, sonoma:        "d169282a1d0a9a0d2fc29f922663950626f78b08defa812a8166e48aa38dfc57"
+    sha256 cellar: :any_skip_relocation, ventura:       "1497b6d19d9dcc76dcd8c0572cb3091c990c2d0d8577b2cbc34839bed1909c2b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a565bcb6a17c3c6fa03f4a5051981292b42a32fa43fd5660de5b74a3faaedbd9"
   end
 
   depends_on "pkgconf" => :build

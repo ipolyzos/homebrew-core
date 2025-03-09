@@ -1,8 +1,8 @@
 class OpenapiGenerator < Formula
   desc "Generate clients, server & docs from an OpenAPI spec (v2, v3)"
   homepage "https://openapi-generator.tech/"
-  url "https://search.maven.org/remotecontent?filepath=org/openapitools/openapi-generator-cli/7.11.0/openapi-generator-cli-7.11.0.jar"
-  sha256 "113c25df5a781d5a1fc2b883f12fe8f263db285ab12e15854d5b15306e1bf7fc"
+  url "https://search.maven.org/remotecontent?filepath=org/openapitools/openapi-generator-cli/7.12.0/openapi-generator-cli-7.12.0.jar"
+  sha256 "33e7dfa7a1f04d58405ee12ae19e2c6fc2a91497cf2e56fa68f1875a95cbf220"
   license "Apache-2.0"
 
   livecheck do
@@ -11,7 +11,8 @@ class OpenapiGenerator < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "ec269873d2848f8720e22647684662d000d3d0978825b2b7c5682fa30652b890"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "2942b86edd383627e68995f4e1230f2a9083100a0e9abbe385cc43385f6143fc"
   end
 
   head do
@@ -20,7 +21,7 @@ class OpenapiGenerator < Formula
     depends_on "maven" => :build
   end
 
-  depends_on "openjdk@11"
+  depends_on "openjdk"
 
   def install
     if build.head?
@@ -30,7 +31,7 @@ class OpenapiGenerator < Formula
       libexec.install "openapi-generator-cli-#{version}.jar" => "openapi-generator-cli.jar"
     end
 
-    bin.write_jar_script libexec/"openapi-generator-cli.jar", "openapi-generator", java_version: "11"
+    bin.write_jar_script libexec/"openapi-generator-cli.jar", "openapi-generator"
   end
 
   test do
