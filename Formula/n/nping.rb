@@ -1,17 +1,17 @@
 class Nping < Formula
   desc "Ping Tool in Rust with Real-Time Data and Visualizations"
   homepage "https://github.com/hanshuaikang/Nping"
-  url "https://github.com/hanshuaikang/Nping/archive/refs/tags/v0.2.4.tar.gz"
-  sha256 "0e3d3578a5408ce734a8d62b397e4c7c6621dc599780bbe84f10bfc470da1ae4"
+  url "https://github.com/hanshuaikang/Nping/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "5d445cb65d0f048df39cb18a8cec94168940c98a59cea5673d15a26f0de87201"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a46ba04c938228f178c4b8a00ee5e32e5e2020169da8e972b5c8e1d95a97116b"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9974fbfb15d16262440d6f07e1d15c0bc2862ef1649b96bdfbf71dc134a85f28"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "d8f695caf74091167b42a8abe1ae37be5fcccd479c3b3d05f1e345c3a072afc0"
-    sha256 cellar: :any_skip_relocation, sonoma:        "53855e201900f93d2db5d5f05aa597813f2737f3209ad1220b286dd0d7994874"
-    sha256 cellar: :any_skip_relocation, ventura:       "52582a4b3079e12636af8994a7b493b15d0ab97937e8640601e99c022447113d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c8a3039be6dd0c33c00dcd3161debea75ce352302c29b33f22c7f94ffc0143e8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9136f7e33a520e7001a8f10bb737607656bf2cb47537838a8234e16043148c7a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d560c89b12da7d7541177367187a8fcaad60dafa9e14cca72aead2fe1cec1a2e"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "d788ebf7d9e3efb94d23b6f9b3f10d90c611dc31597e30d93065a31135fa0737"
+    sha256 cellar: :any_skip_relocation, sonoma:        "72043c6c4d34707cdd0018b8f17a84b7ec0caf116e175a48a4ba5ec1a61071d0"
+    sha256 cellar: :any_skip_relocation, ventura:       "152e01c63936a65b841d904169ebe665a0f9b2cec7b82dfd296d7dcf4a76005c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0fe4781035df88fe41a4399fffdf716c3e5b3868170c1ebd901c9620ca1d672d"
   end
 
   depends_on "rust" => :build

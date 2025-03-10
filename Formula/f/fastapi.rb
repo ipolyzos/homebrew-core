@@ -3,17 +3,18 @@ class Fastapi < Formula
 
   desc "CLI for FastAPI framework"
   homepage "https://fastapi.tiangolo.com/"
-  url "https://files.pythonhosted.org/packages/ab/dd/d854f85e70f7341b29e3fda754f2833aec197bd355f805238758e3bcd8ed/fastapi-0.115.9.tar.gz"
-  sha256 "9d7da3b196c5eed049bc769f9475cd55509a112fbe031c0ef2f53768ae68d13f"
+  url "https://files.pythonhosted.org/packages/b5/28/c5d26e5860df807241909a961a37d45e10533acef95fc368066c7dd186cd/fastapi-0.115.11.tar.gz"
+  sha256 "cc81f03f688678b92600a65a5e618b93592c65005db37157147204d8924bf94f"
   license "MIT"
+  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "ae595008c5decddee4953f83069abdb64175b341e2abcf4d26418a783994c5cf"
-    sha256 cellar: :any,                 arm64_sonoma:  "d2fa4aa7de6971938eb6e9f941893552c528a81523a5d7e135ca92b9662db1ba"
-    sha256 cellar: :any,                 arm64_ventura: "a1e239812ca92aa50072528c6b13b954b69d7e5a89dd26a42ebcdf57014d0f31"
-    sha256 cellar: :any,                 sonoma:        "a1b2b71787bcdcc2f6a78a979f00cf777f0ed07c77a4236487bbc88f5f54df06"
-    sha256 cellar: :any,                 ventura:       "0e795404d5ed5aafac023713dee7f85e93d5b6a6680d94aeb2f742c90435c052"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "98390a8c4b93444c1c04f1baaf9ae92de08d0f1b883baac529a36a372f674a38"
+    sha256 cellar: :any,                 arm64_sequoia: "d7fa9b8f5aabdef81c0110b49a4e9d4a100d74b61521f5c45e909a5ab192e6dc"
+    sha256 cellar: :any,                 arm64_sonoma:  "9def746936546cb01910bc3238abacb45b46d1f6a67e7a35e2dab15d91f08049"
+    sha256 cellar: :any,                 arm64_ventura: "0224ece4892fba7bf0484e63dd9fe91199220b7bc0a27b7014488308cdda202f"
+    sha256 cellar: :any,                 sonoma:        "ae16136c5b4e9ba22052df140f9aaba11458eee3d136fc06c0659416c3527ba2"
+    sha256 cellar: :any,                 ventura:       "ff628b1cac991d124ddd2a659a1c724d3fe3ff3a1679967cc65694a1b472f9ac"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f31923d033ca2225847c30389b38417c5c6e9aa8cd0e510a19ea24379a840b4b"
   end
 
   depends_on "rust" => :build # for pydantic
@@ -81,8 +82,8 @@ class Fastapi < Formula
   end
 
   resource "jinja2" do
-    url "https://files.pythonhosted.org/packages/af/92/b3130cbbf5591acf9ade8708c365f3238046ac7cb8ccba6e81abccb0ccff/jinja2-3.1.5.tar.gz"
-    sha256 "8fefff8dc3034e27bb80d67c671eb8a9bc424c0ef4c0826edbff304cceff43bb"
+    url "https://files.pythonhosted.org/packages/df/bf/f7da0350254c0ed7c72f3e33cef02e048281fec7ecec5f032d4aac52226b/jinja2-3.1.6.tar.gz"
+    sha256 "0137fb05990d35f1275a587e9aee6d56da821fc83491a0fb838183be43f66d6d"
   end
 
   resource "markdown-it-py" do
@@ -151,13 +152,13 @@ class Fastapi < Formula
   end
 
   resource "starlette" do
-    url "https://files.pythonhosted.org/packages/ff/fb/2984a686808b89a6781526129a4b51266f678b2d2b97ab2d325e56116df8/starlette-0.45.3.tar.gz"
-    sha256 "2cbcba2a75806f8a41c722141486f37c28e30a0921c5f6fe4346cb0dcee1302f"
+    url "https://files.pythonhosted.org/packages/44/b6/fb9a32e3c5d59b1e383c357534c63c2d3caa6f25bf3c59dd89d296ecbaec/starlette-0.46.0.tar.gz"
+    sha256 "b359e4567456b28d473d0193f34c0de0ed49710d75ef183a74a5ce0499324f50"
   end
 
   resource "typer" do
-    url "https://files.pythonhosted.org/packages/cb/ce/dca7b219718afd37a0068f4f2530a727c2b74a8b6e8e0c0080a4c0de4fcd/typer-0.15.1.tar.gz"
-    sha256 "a0588c0a7fa68a1978a069818657778f86abe6ff5ea6abf472f940a08bfe4f0a"
+    url "https://files.pythonhosted.org/packages/8b/6f/3991f0f1c7fcb2df31aef28e0594d8d54b05393a0e4e34c65e475c2a5d41/typer-0.15.2.tar.gz"
+    sha256 "ab2fab47533a813c49fe1f16b1a370fd5819099c00b119e0633df65f22144ba5"
   end
 
   resource "typing-extensions" do
@@ -181,8 +182,8 @@ class Fastapi < Formula
   end
 
   resource "websockets" do
-    url "https://files.pythonhosted.org/packages/2e/7a/8bc4d15af7ff30f7ba34f9a172063bfcee9f5001d7cef04bee800a658f33/websockets-15.0.tar.gz"
-    sha256 "ca36151289a15b39d8d683fd8b7abbe26fc50be311066c5f8dcf3cb8cee107ab"
+    url "https://files.pythonhosted.org/packages/21/e6/26d09fab466b7ca9c7737474c52be4f76a40301b08362eb2dbc19dcc16c1/websockets-15.0.1.tar.gz"
+    sha256 "82544de02076bafba038ce055ee6412d68da13ab47f0c60cab827346de828dee"
   end
 
   def install

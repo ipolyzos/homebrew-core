@@ -1,17 +1,17 @@
 class FancyCat < Formula
   desc "PDF reader for terminal emulators using the Kitty image protocol"
   homepage "https://github.com/freref/fancy-cat"
-  url "https://github.com/freref/fancy-cat/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "60f92cd08da6ed845b81edca75f376bf312b26e5420b7a244b275845b6f38af8"
-  license "MIT"
+  url "https://github.com/freref/fancy-cat/archive/refs/tags/v0.4.0.tar.gz"
+  sha256 "bce101d5eb009ec9057f7b87f6ad767ee96238abcee8854a9db7febd0229a2bf"
+  license "AGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "d12990678c4072a43aa05986d1513e50c7ea99b949c40739a967ccf71eff1977"
-    sha256 cellar: :any,                 arm64_sonoma:  "bd6b511521b63625553e008e395532c724d3e7e3c58e7e45250b6f3c77a00927"
-    sha256 cellar: :any,                 arm64_ventura: "76940b4ef61d513168042b3a7c685d0c849de25f23d4fdb0346693b91a16641f"
-    sha256 cellar: :any,                 sonoma:        "df6618f24ba5d6ddd25c72fc45febe04794489ecff753b813cd893b4fd979a9a"
-    sha256 cellar: :any,                 ventura:       "99cb60960cab7749739a1c9707dc2bdf60f1212d55dc642a5edab24ff8f11580"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "210539b80b7fdfedd1e27cfbf36ad1f516eed15620c7a70f7cead4ce29699e3e"
+    sha256 cellar: :any,                 arm64_sequoia: "c58a78244bc3fa2960e7da1fef67cb37fa95044de6b3d18c71f21d09acdc9a82"
+    sha256 cellar: :any,                 arm64_sonoma:  "85ed09ccf93cc98a5bee963234cfe58d73f40425124f5b2e548e6eee48b97d50"
+    sha256 cellar: :any,                 arm64_ventura: "0f10abd85dfe9b4a4cdbed1341ceca7793d97f792477752a858c9d139e8d5198"
+    sha256 cellar: :any,                 sonoma:        "74333ba909b6af5f78d3f966ce3a2f44a215e3016feda09f8cdc29e3db0a5620"
+    sha256 cellar: :any,                 ventura:       "0a489a3529ffca4c283680fe3ac734d614fdea54d66696fbefbc7a06c24ae604"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3ae039db5bcb1d98c058aedf2616c119ad51e6dc2d025a54eab28c79aff0733d"
   end
 
   depends_on "zig" => :build

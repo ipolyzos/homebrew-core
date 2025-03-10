@@ -3,17 +3,17 @@ class CfnLint < Formula
 
   desc "Validate CloudFormation templates against the CloudFormation spec"
   homepage "https://github.com/aws-cloudformation/cfn-lint/"
-  url "https://files.pythonhosted.org/packages/89/1d/5dd52b212e3b132f130fa73157b7af9859a714042a3ff520818b0ff563ce/cfn_lint-1.26.1.tar.gz"
-  sha256 "801a504f6eb9b9322060744cc5e14f2544abf674939d47e6583bf95aa249d910"
+  url "https://files.pythonhosted.org/packages/aa/d9/fd2363a758016280ae23626a562d82896b4572ff68575f9531bc3256acf2/cfn_lint-1.29.0.tar.gz"
+  sha256 "f6efd12aad72c4905f395d6366f98a0bc8d725b0498bad7ead2221246c0c53b2"
   license "MIT-0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "97765b1722c6cba353cccedbca329d8e64716a34ad90b41f63ec5f4d2b80a043"
-    sha256 cellar: :any,                 arm64_sonoma:  "5bddfe531838bd51285f520c121cfeaa65415e866a968eb5fe28a91f91c6abd0"
-    sha256 cellar: :any,                 arm64_ventura: "1a5236941da78a765c5d6feba272a4e3ef81deb782aa0a4b3c20adb83ca10f7e"
-    sha256 cellar: :any,                 sonoma:        "6ccd52e382acaf4951468ca872e0501fd6303aec2edd2c0b71d6a343a784cb61"
-    sha256 cellar: :any,                 ventura:       "aff6cb78438b730dcef24430a459417b7e0949598df2bd9732318cff611d2dd9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dd98dbded3b8fb8600eaf08efd0d453c788f392f0e9d58dd7ac3f90d95d90fe9"
+    sha256 cellar: :any,                 arm64_sequoia: "79439503a6ca1589dfafb28570613f754d4c3b745047841a99e79b160876747f"
+    sha256 cellar: :any,                 arm64_sonoma:  "c846c897fc254da5899e1ee28f601e83e122bdedfbb80a6c4d8a17085d28ed7b"
+    sha256 cellar: :any,                 arm64_ventura: "32d7aebbe262f971663d37693afc8ba63f974d159eeca03941b59fb81e998767"
+    sha256 cellar: :any,                 sonoma:        "7422e67620d5f85655d38748f2566763c7732c42c524aed4b382e76e8ef13c48"
+    sha256 cellar: :any,                 ventura:       "9bd794e0354f1819b394e7c1612d6ba14344d4fbab011aad2ae6dd676e694ff9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dd0db5f1fb30945c54adcea8150801c5efdc7678be7c75d40149001e9c1f8c6c"
   end
 
   depends_on "rust" => :build
@@ -36,13 +36,13 @@ class CfnLint < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/21/8c/c2af03daafaacea1db1823d23073facffa75818b61d376c3be77dd297ae8/boto3-1.37.1.tar.gz"
-    sha256 "96d18f7feb0c1fcb95f8837b74b6c8880e1b4e35ce5f8a8f8cb243a090c278ed"
+    url "https://files.pythonhosted.org/packages/32/f7/b870fb8d2ca96a996db97c9d30d1eb087b341cec1004722e99672a79800d/boto3-1.37.9.tar.gz"
+    sha256 "51b76da93d7c2a3dff6155ee4aa25455940e7ade08292d22aeeed08b9e0dbf0b"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/e5/01/3083bff25fd91193162298920cb093b9095609408416526d52b2826965b7/botocore-1.37.1.tar.gz"
-    sha256 "b194db8fb2a0ffba53568c364ae26166e7eec0445496b2ac86a6e142f3dd982f"
+    url "https://files.pythonhosted.org/packages/3c/9e/97ee17ec39395c67edfa694ae9e87177fdb7433e65be91bc84fef983dd86/botocore-1.37.9.tar.gz"
+    sha256 "2fdafbb9c44196cd371f4890aedf9f54352348fbae624a3880862d35724f0956"
   end
 
   resource "jmespath" do
@@ -116,8 +116,8 @@ class CfnLint < Formula
   end
 
   resource "s3transfer" do
-    url "https://files.pythonhosted.org/packages/62/45/2323b5928f86fd29f9afdcef4659f68fa73eaa5356912b774227f5cf46b5/s3transfer-0.11.2.tar.gz"
-    sha256 "3b39185cb72f5acc77db1a58b6e25b977f28d20496b6e58d6813d75f464d632f"
+    url "https://files.pythonhosted.org/packages/0f/ec/aa1a215e5c126fe5decbee2e107468f51d9ce190b9763cb649f76bb45938/s3transfer-0.11.4.tar.gz"
+    sha256 "559f161658e1cf0a911f45940552c696735f5c74e64362e515f333ebed87d679"
   end
 
   resource "six" do

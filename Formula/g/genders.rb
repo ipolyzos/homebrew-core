@@ -1,9 +1,9 @@
 class Genders < Formula
   desc "Static cluster configuration database for cluster management"
   homepage "https://github.com/chaos/genders"
-  url "https://github.com/chaos/genders/archive/refs/tags/genders-1-30-1.tar.gz"
-  version "1.30.1"
-  sha256 "6cbe717add68b45d27685fb9f324b5eb531da660ca22aa4430738b27c3e19bf2"
+  url "https://github.com/chaos/genders/archive/refs/tags/genders-1-32-1.tar.gz"
+  version "1.32.1"
+  sha256 "0dc186ec8fd01ec10b5e171d8b8ef632a56d17c135baee2570c0a3c0ffd9d64d"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -15,12 +15,12 @@ class Genders < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "3dc6003d34054ca5fbd0798270fefd9255623536ad58f18a0e05a8d864337314"
-    sha256 cellar: :any,                 arm64_sonoma:  "f26d79af42864c5576c9e7e59303f32403cc7611094df8595d2b0e4fddc1fd16"
-    sha256 cellar: :any,                 arm64_ventura: "1ea15002ed41220dc87ac706e3495b545d7bd40e8ab7dbdf0342762138497998"
-    sha256 cellar: :any,                 sonoma:        "20a7d3a16430a0d20425d688387d1b0cddf1706d254f8dade3dc8515b3c629da"
-    sha256 cellar: :any,                 ventura:       "71a2a71c741ac16fe8d54345ff909917ad71b936899381896ae486cefa026837"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "18c1e118e576282e550f16e34d1ae820a7b5baf48b30efa5403106428ebc9389"
+    sha256 cellar: :any,                 arm64_sequoia: "62f03cd7307b153442bf0354c80db74e9f17b6eb76fc0913e9f58d24d3eca939"
+    sha256 cellar: :any,                 arm64_sonoma:  "378b3b15497a18109d4083be8b58c69926f5aba003335ad6ead80187bcba23fa"
+    sha256 cellar: :any,                 arm64_ventura: "85ce393a73b4c8102f4337e4fdd14cbe801e003951b92452ae7cacd733c37b0f"
+    sha256 cellar: :any,                 sonoma:        "dc5878427ff5e64542ee04d17fe4cafe426b0aa8de57ce6772d6caefa858eb67"
+    sha256 cellar: :any,                 ventura:       "418c4f1cd65608a9b31203c3fe1351260ab9af1c5e0ed7dc7ad6df40b2f816d4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9d4d80a5708b75bb42090098c791379194c9da4fc9cb41a1ff40193b69d0bea3"
   end
 
   uses_from_macos "bison" => :build
@@ -28,7 +28,6 @@ class Genders < Formula
   uses_from_macos "perl" => :build
   uses_from_macos "python" => :build
 
-  # upstream issue to drop distutils usage, https://github.com/chaos/genders/issues/65
   on_linux do
     depends_on "python-setuptools" => :build
   end
@@ -41,6 +40,8 @@ class Genders < Formula
 
   def install
     ENV["PYTHON"] = which("python3")
+
+    ENV.append "CXXFLAGS", "-std=c++14"
 
     system "./configure", "--with-java-extensions=no", *std_configure_args
     system "make", "install"
